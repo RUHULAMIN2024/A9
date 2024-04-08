@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Nav = () => {
 
@@ -29,8 +29,8 @@ const Nav = () => {
         </ul>
       </div>
       <div className="hidden md:flex navbar-end">
-        <a className="btn text-white bg-green-500 mr-3 hover:text-green-500">Sign In</a>
-        <a className="btn text-white hover:text-blue-500 bg-blue-500">Sign Up</a>
+        <Link to="/register" className="btn text-white bg-green-500 mr-3 hover:text-green-500">Register</Link>
+        <Link to="/login" className="btn text-white hover:text-blue-500 bg-blue-500">Login</Link>
       </div>
     </div>
   );
