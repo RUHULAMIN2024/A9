@@ -4,10 +4,8 @@ const Nav = () => {
 
   const links = <>
     <NavLink to="/" className={({ isActive }) => isActive ? 'text-green-500 border-green-500 border p-2 rounded-xl font-bold' : 'font-bold p-2'}>Home</NavLink>
-    <NavLink to="/listed-books" className={({ isActive }) => isActive ? 'text-green-500 border-green-500 border p-2 rounded-xl font-bold' : 'font-bold p-2'}>Listed Books</NavLink>
-    <NavLink to="/pages-to-read" className={({ isActive }) => isActive ? 'text-green-500 border-green-500 border p-2 rounded-xl font-bold' : 'font-bold p-2'}>Pages to Read</NavLink>
-    <NavLink to="/upcoming-books" className={({ isActive }) => isActive ? 'text-green-500 border-green-500 border p-2 rounded-xl font-bold' : 'font-bold p-2'}>Upcoming Books</NavLink>
-    <NavLink to="/about-us" className={({ isActive }) => isActive ? 'text-green-500 border-green-500 border p-2 rounded-xl font-bold' : 'font-bold p-2'}>About Us</NavLink>
+    <NavLink to="/" className={({ isActive }) => isActive ? 'text-green-500 border-green-500 border p-2 rounded-xl font-bold' : 'font-bold p-2'}>Home</NavLink>
+    <NavLink to="/" className={({ isActive }) => isActive ? 'text-green-500 border-green-500 border p-2 rounded-xl font-bold' : 'font-bold p-2'}>Home</NavLink>
   </>
   return (
     <div className="navbar sticky top-0 z-10 my-3 bg-base-100">
@@ -20,7 +18,7 @@ const Nav = () => {
             {links}
           </ul>
         </div>
-        <a className="btn btn-ghost font-black text-green-500 text-2xl md:text-2xl">Book Vibe</a>
+        <a className="btn btn-ghost font-black text-green-500 text-2xl md:text-2xl">Dream House</a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu space-x-3 menu-horizontal px-1">
