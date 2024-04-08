@@ -1,4 +1,6 @@
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../AuthProvider/AuthProvider";
 
 const Nav = () => {
 
@@ -7,6 +9,9 @@ const Nav = () => {
     <NavLink to="/" className={({ isActive }) => isActive ? 'text-green-500 border-green-500 border p-2 rounded-xl font-bold' : 'font-bold p-2'}>Home</NavLink>
     <NavLink to="/" className={({ isActive }) => isActive ? 'text-green-500 border-green-500 border p-2 rounded-xl font-bold' : 'font-bold p-2'}>Home</NavLink>
   </>
+
+  
+  const {logout, userInfo}= useContext(AuthContext)
   return (
     <div className="navbar sticky top-0 z-10 my-3 bg-base-100">
       <div className="navbar-start">
@@ -26,9 +31,25 @@ const Nav = () => {
           {links}
         </ul>
       </div>
-      <div className="hidden md:flex navbar-end">
-        <Link to="/register" className="btn text-white bg-green-500 mr-3 hover:text-green-500">Register</Link>
+      <div className="navbar-end">
+      <Link to="/register" className="btn text-white bg-green-500 mr-3 hover:text-green-500">Register</Link>
+        {
+          userInfo?<div className="dropdown dropdown-end">
+          <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+            <div className="w-10 rounded-full">
+              <img alt="profile img" src={userInfo?.photoURL} />
+            </div>
+          </div>
+          <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+            <li><button className="btn btn-ghost">{userInfo.displayName}</button></li>
+            <li><button onClick={()=>logout()} className="btn btn-ghost">Logout</button></li>
+          </ul>
+        </div>
+        :
         <Link to="/login" className="btn text-white hover:text-blue-500 bg-blue-500">Login</Link>
+        }
+        
+        
       </div>
     </div>
   );
