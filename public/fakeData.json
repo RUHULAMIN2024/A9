@@ -9,7 +9,7 @@
       "status": "sale",
       "area": "3500 sq ft",
       "location": "Malibu, California",
-      "facilities": ["living room", "swimming pool", "kitchen"],
+      "facilities": ["living room", "swimming pool", "kitchen"]
     },
     {
       "image": "https://img.freepik.com/free-photo/full-shot-people-reading-book-club_23-2150062121.jpg?w=740",
@@ -21,7 +21,7 @@
       "status": "sale",
       "area": "2200 sq ft",
       "location": "Austin, Texas",
-      "facilities": ["living room", "backyard", "kitchen"],
+      "facilities": ["living room", "backyard", "kitchen"]
     },
     {
       "image": "https://img.freepik.com/free-photo/view-from-balcony-apartment_188544-12685.jpg?w=996",
@@ -33,7 +33,7 @@
       "status": "sale",
       "area": "3000 sq ft",
       "location": "Manhattan, New York",
-      "facilities": ["living room", "terrace", "gym"],
+      "facilities": ["living room", "terrace", "gym"]
     },
     {
       "image": "https://img.freepik.com/free-photo/house-with-garage-fence-front-it_1340-32136.jpg?w=740",
@@ -45,7 +45,7 @@
       "status": "sale",
       "area": "1800 sq ft",
       "location": "Seattle, Washington",
-      "facilities": ["living room", "rooftop deck", "kitchen"],
+      "facilities": ["living room", "rooftop deck", "kitchen"]
     },
     {
       "image": "https://img.freepik.com/free-photo/full-shot-girl-holding-laptop_23-2149455164.jpg?w=740",
@@ -57,7 +57,7 @@
       "status": "sale",
       "area": "4000 sq ft",
       "location": "Denver, Colorado",
-      "facilities": ["living room", "barn", "kitchen"],
+      "facilities": ["living room", "barn", "kitchen"]
     },
     {
       "image": "https://img.freepik.com/free-photo/photorealistic-wooden-house-with-timber-structure_23-2151302626.jpg?w=740",
@@ -69,7 +69,7 @@
       "status": "sale",
       "area": "1500 sq ft",
       "location": "Miami, Florida",
-      "facilities": ["living room", "patio", "kitchen"],
+      "facilities": ["living room", "patio", "kitchen"]
     }
   ]
   
