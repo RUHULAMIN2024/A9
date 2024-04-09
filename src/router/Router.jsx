@@ -4,6 +4,9 @@ import Home from "../pages/Home";
 import ErrorPage from "../pages/ErrorPage";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
+import PrivetRoute from "./PrivetRoute";
+import ContactUs from "../pages/ContactUs";
+import Details from "../pages/Details";
 
 const router = createBrowserRouter([
     {
@@ -14,6 +17,12 @@ const router = createBrowserRouter([
         {
           path:"/",
           element:<Home></Home>,
+          loader: ()=> fetch('/fakeData.json')
+        },
+        {
+          path:"/:id",
+          element:<Details></Details>,
+          loader: ()=> fetch('/fakeData.json'),
         },
         {
           path:"/login",
@@ -22,6 +31,10 @@ const router = createBrowserRouter([
         {
           path:"/register",
           element:<Register></Register>,
+        },
+        {
+          path:"/contact",
+          element:<PrivetRoute><ContactUs></ContactUs></PrivetRoute>
         }
       ]
     },

@@ -17,8 +17,8 @@
       "id": "002",
       "segment_name": "Single-Family Homes",
       "description": "Charming family home with a spacious backyard, perfect for entertaining. Features include a renovated kitchen, hardwood floors, and a fireplace.",
-      "price": "$400,000",
-      "status": "sale",
+      "price": "$4,000",
+      "status": "rent",
       "area": "2200 sq ft",
       "location": "Austin, Texas",
       "facilities": ["living room", "backyard", "kitchen"]
@@ -41,8 +41,8 @@
       "id": "004",
       "segment_name": "Townhouses",
       "description": "Sleek and stylish townhouse in a prime location. Features include open-concept living space, gourmet kitchen, and rooftop deck.",
-      "price": "$600,000",
-      "status": "sale",
+      "price": "$6,000",
+      "status": "rent",
       "area": "1800 sq ft",
       "location": "Seattle, Washington",
       "facilities": ["living room", "rooftop deck", "kitchen"]
@@ -65,8 +65,8 @@
       "id": "006",
       "segment_name": "Senior Living Communities",
       "description": "Quaint cottage steps away from the beach. Features include a cozy fireplace, ocean views, and a private patio.",
-      "price": "$300,000",
-      "status": "sale",
+      "price": "$3,000",
+      "status": "rent",
       "area": "1500 sq ft",
       "location": "Miami, Florida",
       "facilities": ["living room", "patio", "kitchen"]
