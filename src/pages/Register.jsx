@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import { Helmet } from "react-helmet-async";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
@@ -22,6 +23,7 @@ const Register = () => {
 
     return (
         <div className="card-body rounded-xl shrink-0 w-full max-w-sm my-10 mx-auto bg-base-200">
+            <Helmet><title>Dream House | Register</title></Helmet>
             <form onSubmit={handleSubmit(onSubmit)} >
                 <div className="form-control">
                     <label className="label">

@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { useLoaderData, useParams } from "react-router-dom";
 
 const Details = () => {
@@ -19,6 +20,7 @@ const Details = () => {
 
     return (
         <div className="p-5 mx-auto sm:p-10 md:p-16 dark:bg-gray-100 dark:text-gray-800">
+            <Helmet><title>Dream House | Details: {id}</title></Helmet>
             <div className="flex flex-col max-w-3xl mx-auto overflow-hidden rounded">
                 <img src={image} alt="" className="w-full h-60 sm:h-96 dark:bg-gray-500" />
                 <div className="p-6 pb-12 m-4 mx-auto -mt-16 space-y-6 lg:max-w-2xl sm:px-10 sm:mx-12 lg:rounded-md bg-base-200 animate__fadeInUp animate__animated">

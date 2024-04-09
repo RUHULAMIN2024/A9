@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { useLoaderData } from "react-router-dom";
 import Cards from "../components/cards";
 import Slider from "../components/Slider";
@@ -6,6 +7,7 @@ const Home = () => {
     const estates = useLoaderData()
     return (
         <div>
+            <Helmet><title>Dream House | Home</title></Helmet>
             <Slider></Slider>
             <h2 className="text-3xl font-bold text-center mt-20 animate__animated animate__fadeInUp ">
                 Best Deals for Sale
