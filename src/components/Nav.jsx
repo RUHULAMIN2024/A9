@@ -6,7 +6,7 @@ const Nav = () => {
 
   const links = <>
     <NavLink to="/" className={({ isActive }) => isActive ? 'text-green-500 border-green-500 border p-2 rounded-xl font-bold' : 'font-bold p-2'}>Home</NavLink>
-    <NavLink to="/" className={({ isActive }) => isActive ? 'text-green-500 border-green-500 border p-2 rounded-xl font-bold' : 'font-bold p-2'}>Home</NavLink>
+    <NavLink to="/update-profile" className={({ isActive }) => isActive ? 'text-green-500 border-green-500 border p-2 rounded-xl font-bold' : 'font-bold p-2'}>Update Profile</NavLink>
     <NavLink to="/contact" className={({ isActive }) => isActive ? 'text-green-500 border-green-500 border p-2 rounded-xl font-bold' : 'font-bold p-2'}>Contact Us</NavLink>
   </>
 
@@ -41,8 +41,8 @@ const Nav = () => {
 
         {
           userInfo ? <><button onClick={() => logout()} className="btn mr-3 bg-green-500 btn-ghost">Logout</button>
-              <div className="w-10 rounded-full tooltip tooltip-left" data-tip={userInfo.displayName}>
-                <button><img alt="profile img" src={userInfo?.photoURL} /></button>
+              <div className="w-10 h-10 rounded-full tooltip tooltip-left" data-tip={userInfo.displayName}>
+                <button><img className="rounded-full w-10 h-10" alt="profile" src={userInfo?.photoURL} /></button>
               </div>
           </>
             :

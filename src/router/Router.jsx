@@ -7,6 +7,7 @@ import Register from "../pages/Register";
 import PrivetRoute from "./PrivetRoute";
 import ContactUs from "../pages/ContactUs";
 import Details from "../pages/Details";
+import UpdateProfile from "../pages/UpdateProfile";
 
 const router = createBrowserRouter([
     {
@@ -31,6 +32,11 @@ const router = createBrowserRouter([
         {
           path:"/register",
           element:<Register></Register>,
+        },
+
+        {
+          path:"/update-profile",
+          element:<PrivetRoute><UpdateProfile></UpdateProfile></PrivetRoute>
         },
         {
           path:"/contact",

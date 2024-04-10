@@ -5,7 +5,7 @@ import { AuthContext } from "../AuthProvider/AuthProvider";
 const PrivetRoute = ({ children }) => {
 
     const { userInfo, loding } = useContext(AuthContext);
-    console.log(children, userInfo)
+    
     if (loding) {
         return (
             <div className="text-center my-48">

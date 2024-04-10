@@ -7,7 +7,7 @@
 - Login with Google and Github
 - Responsive Design
 - Feedback and Contact Forms
-- Agent Profiles
+- Costomers Profiles
 - Shopping Cart
 
 ## Npm Packages:

@@ -1,12 +1,18 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
+import { FaRegEyeSlash, FaRegEye } from "react-icons/fa";
+
 
 const Login = () => {
 
-    const { loginUser, googleLogin, githubLogin } = useContext(AuthContext);
+    const [showPassword, setShowPassword] = useState(false);
+    const {loginUser, googleLogin, githubLogin } = useContext(AuthContext);
+
+
+    
 
     const {
         register,
@@ -36,10 +42,15 @@ const Login = () => {
                     {errors.email && <span className="text-red-500">This field is required</span>}
                 </div>
                 <div className="form-control">
-                    <label className="label">
+                    <label className="relative label">
                         <span className="label-text">Password</span>
+                        <span onClick={() => setShowPassword(!showPassword)} className="absolute text-2xl top-12 right-3">
+                            {
+                                showPassword ? <FaRegEyeSlash /> : <FaRegEye />
+                            }
+                        </span>
                     </label>
-                    <input type="password" placeholder="password" className="input input-bordered" {...register("password", { required: true })} />
+                    <input type={showPassword?"text":"password"} placeholder="password" className="input input-bordered" {...register("password", { required: true })} />
                     {errors.password && <span className="text-red-500">This field is required</span>}
                     <label className="label">
                         <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
