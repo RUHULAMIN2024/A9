@@ -40,31 +40,40 @@ const AuthProvider = ({ children }) => {
 
     // logout
     const logout = () => {
-        setUserInfo(null);
         setLoding(true);
+        // setUserInfo(null);
+        
         signOut(auth)
     }
+
+
+    const user = auth.currentUser;
+
+    const userUpdate=(name, photo)=>{
+        setLoding(true)
+        updateProfile(auth.currentUser, {
+            displayName: name, photoURL: photo
+          })
+    }
+
+
 
     //observer
     useEffect(() => {
         const unSubscribe = onAuthStateChanged(auth, (user) => {
-            if (user) {
-                setUserInfo(user)
-                setLoding(false);
-            }
+
+            setUserInfo(user)
+            setLoding(false);
+
         });
         return () => {
             unSubscribe()
         }
     }, []);
 
-    const userUpdate=(name, photo)=>{
-        updateProfile(auth.currentUser, {
-            displayName: name, photoURL: photo
-          })
-    }
+    
 
-    const user = auth.currentUser;
+    
     
 
     const allValues = {

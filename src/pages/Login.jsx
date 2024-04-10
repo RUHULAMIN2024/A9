@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import { FaRegEyeSlash, FaRegEye } from "react-icons/fa";
 
@@ -10,9 +10,9 @@ const Login = () => {
 
     const [showPassword, setShowPassword] = useState(false);
     const {loginUser, googleLogin, githubLogin } = useContext(AuthContext);
-
-
-    
+    const location = useLocation(); 
+    console.log(location)
+    const navigate= useNavigate();
 
     const {
         register,
@@ -24,6 +24,7 @@ const Login = () => {
         loginUser(email, password)
             .then(result => {
                 console.log(result)
+                navigate(location?.state ? location.state : '/')
             })
             .catch(error=>{
                 console.log(error)
