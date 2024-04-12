@@ -41,16 +41,16 @@ const AuthProvider = ({ children }) => {
     // logout
     const logout = () => {
         setLoding(true);
-        // setUserInfo(null);
         
         signOut(auth)
     }
-
-
-   
     
-   
-    
+    const userUpdate=(name, photo)=>{
+        
+        updateProfile(auth.currentUser, {
+            displayName: name, photoURL: photo
+          })
+    }
 
     //observer
     useEffect(() => {
@@ -65,12 +65,7 @@ const AuthProvider = ({ children }) => {
         }
     }, []);
 
-    const userUpdate=(name, photo)=>{
-        
-        updateProfile(auth.currentUser, {
-            displayName: name, photoURL: photo
-          })
-    }
+    
 
 
 

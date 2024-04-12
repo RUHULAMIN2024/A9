@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { Helmet } from "react-helmet-async";
+import { toast } from "react-toastify";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 
 const UpdateProfile = () => {
@@ -11,6 +12,7 @@ const UpdateProfile = () => {
         const name=e.target.name.value;
         const photo=e.target.photo.value;
         userUpdate(name, photo)
+        toast.success("profile updated succesfuly!")
     }
 
     return (
