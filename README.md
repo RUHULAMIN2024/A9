@@ -1,6 +1,6 @@
 # Dream House
 
-## url: http://my-assignment-9.surge.sh/
+## http://my-assignment-9.surge.sh/
 
 ## Features:
 - User Registration and Login
