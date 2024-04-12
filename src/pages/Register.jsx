@@ -9,7 +9,7 @@ import { FaRegEyeSlash, FaRegEye } from "react-icons/fa";
 
 const Register = () => {
 
-    const { createUser } = useContext(AuthContext)
+    const { createUser,  } = useContext(AuthContext)
 
     const [error, setError] = useState("");
     const [showPassword, setShowPassword] = useState(false);
@@ -24,7 +24,8 @@ const Register = () => {
 
     const onSubmit = (data) => {
         setError("")
-        const { email, password } = data;
+        const { name,photo, email, password } = data;
+        console.log(data)
         if (password.length < 6) {
             setError("password should be at least 6 characters")
             return;
@@ -40,13 +41,18 @@ const Register = () => {
         createUser(email, password)
             .then(result => {
                 toast("Wow you have succesfuly registered!")
-                console.log(result)
+
             })
+            .catch(error=>{
+                toast.error("Firebase Error")
+            })
+
     }
 
     return (
         <div className="card-body rounded-xl shrink-0 w-full max-w-sm my-10 mx-auto bg-base-200">
             <Helmet><title>Dream House | Register</title></Helmet>
+            <h2 className="text-3xl text-center">Please Register</h2>
             <form onSubmit={handleSubmit(onSubmit)} >
                 <div className="form-control">
                     <label className="label">
@@ -67,7 +73,8 @@ const Register = () => {
                     <label className="label">
                         <span className="label-text">PhotoURL</span>
                     </label>
-                    <input type="text" placeholder="PhotoURL" className="input input-bordered" />
+                    <input type="text" placeholder="PhotoURL" className="input input-bordered" {...register("photo", { required: true })} />
+                    {errors.photo && <span className="text-red-500">This field is required</span>}
                 </div>
                 <div className="form-control">
                     <label className="relative label">
@@ -86,7 +93,7 @@ const Register = () => {
                     </label>
                 </div>
                 <div className="form-control mt-6">
-                    <button className="btn btn-primary">Register</button>
+                    <button className="btn text-white btn-primary">Register</button>
                 </div>
             </form>
             <div className="flex justify-between">

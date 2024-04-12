@@ -22,7 +22,7 @@ const router = createBrowserRouter([
         },
         {
           path:"/:id",
-          element:<Details></Details>,
+          element:<PrivetRoute><Details></Details></PrivetRoute>,
           loader: ()=> fetch('/fakeData.json'),
         },
         {

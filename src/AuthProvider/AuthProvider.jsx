@@ -47,16 +47,10 @@ const AuthProvider = ({ children }) => {
     }
 
 
-    const user = auth.currentUser;
-
-    const userUpdate=(name, photo)=>{
-        setLoding(true)
-        updateProfile(auth.currentUser, {
-            displayName: name, photoURL: photo
-          })
-    }
-
-
+   
+    
+   
+    
 
     //observer
     useEffect(() => {
@@ -71,7 +65,14 @@ const AuthProvider = ({ children }) => {
         }
     }, []);
 
-    
+    const userUpdate=(name, photo)=>{
+        
+        updateProfile(auth.currentUser, {
+            displayName: name, photoURL: photo
+          })
+    }
+
+
 
     
     
@@ -84,7 +85,7 @@ const AuthProvider = ({ children }) => {
         logout,
         userInfo,
         loding,
-        user,
+        
         userUpdate,
 
     }

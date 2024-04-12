@@ -6,7 +6,7 @@ import Slider from "../components/Slider";
 const Home = () => {
     const estates = useLoaderData()
     return (
-        <div>
+        <div className="container mx-auto">
             <Helmet><title>Dream House | Home</title></Helmet>
             <Slider></Slider>
             <h2 className="text-3xl font-bold text-center mt-20 animate__animated animate__fadeInUp ">

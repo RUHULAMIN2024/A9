@@ -4,8 +4,7 @@ import { AuthContext } from "../AuthProvider/AuthProvider";
 
 const UpdateProfile = () => {
 
-    const {user, userUpdate } = useContext(AuthContext);
-    console.log(user)
+    const {userInfo, userUpdate } = useContext(AuthContext);
 
     const handleSubmit=(e)=>{
         e.preventDefault();
@@ -23,7 +22,7 @@ const UpdateProfile = () => {
                     <label className="label">
                         <span className="label-text">Name</span>
                     </label>
-                    <input type="text" placeholder={user?.displayName || "name not available"} name="name" className="input input-bordered"/>
+                    <input type="text" required placeholder={userInfo?.displayName || "Add Your Name"} name="name" className="input input-bordered"/>
                     
                     
                 </div>
@@ -31,14 +30,14 @@ const UpdateProfile = () => {
                     <label className="label">
                         <span className="label-text">Email</span>
                     </label>
-                    <input disabled type="email" placeholder={user?.email || "email not available"} name="email" className="input input-bordered" />
+                    <input type="email" placeholder={userInfo?.email || "Email Not Available"} disabled name="email" className="input input-bordered" />
                     
                 </div>
                 <div className="form-control">
                     <label className="label">
                         <span className="label-text">PhotoURL</span>
                     </label>
-                    <input type="text" placeholder={user?.photoURL || "photoURL not available"} name="photo" className="input input-bordered" />
+                    <input type="text" required placeholder={userInfo?.photoURL || "Add Your PhotoURL"} name="photo" className="input input-bordered" />
                 </div>
                 
                 <div className="form-control mt-6">
