@@ -20,6 +20,7 @@ const UpdateProfile = () => {
         <div>
             <div className="card-body rounded-xl shrink-0 w-full max-w-sm my-10 mx-auto bg-base-200">
             <Helmet><title>Dream House | Update Profile</title></Helmet>
+            <h2 className="text-3xl text-center">Update your Profile</h2>
             <form onSubmit={handleSubmit} >
                 <div className="form-control">
                     <label className="label">
