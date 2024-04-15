@@ -32,7 +32,7 @@ const Login = () => {
     }
 
     return (
-        <div className="card-body rounded-xl shrink-0 w-full max-w-sm my-10 mx-auto bg-base-200">
+        <div className="card-body rounded-xl shrink-0 w-full max-w-sm my-5 mx-auto bg-base-200">
             <Helmet><title>Dream House | Login</title></Helmet>
             <h2 className="text-3xl text-center">Please Login</h2>
             <form onSubmit={handleSubmit(onSubmit)}>
