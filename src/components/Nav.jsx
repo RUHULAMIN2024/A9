@@ -24,7 +24,7 @@ const Nav = () => {
             {links}
           </ul>
         </div>
-        <a className="btn btn-ghost font-semibold text-green-500 xl md:text-2xl">
+        <a className="btn btn-ghost font-semibold text-green-500 text-xl md:text-2xl">
           <div className="md:flex items-center justify-center hidden w-12 h-12 rounded-full bg-green-500">
             <GiHouse className="text-white" />
           </div>
