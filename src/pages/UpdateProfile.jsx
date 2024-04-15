@@ -5,20 +5,21 @@ import { AuthContext } from "../AuthProvider/AuthProvider";
 
 const UpdateProfile = () => {
 
-    const {userInfo, userUpdate } = useContext(AuthContext);
+    const {userInfo, userUpdate, setReload } = useContext(AuthContext);
 
     const handleSubmit=(e)=>{
         e.preventDefault();
         const name=e.target.name.value;
         const photo=e.target.photo.value;
         userUpdate(name, photo)
+        setReload(true)
         toast.success("profile updated succesfuly!")
     }
 
     return (
         <div>
             <div className="card-body rounded-xl shrink-0 w-full max-w-sm my-10 mx-auto bg-base-200">
-            <Helmet><title>Dream House | Update User</title></Helmet>
+            <Helmet><title>Dream House | Update Profile</title></Helmet>
             <form onSubmit={handleSubmit} >
                 <div className="form-control">
                     <label className="label">

@@ -25,7 +25,7 @@ const Cards = ({ estate }) => {
                 
             </div>
             
-            <Link to={`/${id}`} className="btn rounded-none absolute bottom-0 w-full bg-green-500 hover:bg-blue-500">View Property</Link>
+            <Link to={`/${id}`} className="btn rounded-none absolute text-white bottom-0 w-full bg-green-500 hover:bg-blue-500">View Property</Link>
             
             
         </div>

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useContext } from "react";
 import { Helmet } from "react-helmet-async";
 import { useForm } from "react-hook-form";
-import { Link, Navigate } from "react-router-dom";
+import { Link,  } from "react-router-dom";
 import { toast } from "react-toastify";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import { FaRegEyeSlash, FaRegEye } from "react-icons/fa";
@@ -40,9 +40,8 @@ const Register = () => {
         }
         createUser(email, password)
             .then(result => {
-                toast.success("Wow you have succesfuly registered!")
                 userUpdate(name, photo)
-
+                toast.success("Wow you have succesfuly registered!")
             })
             .catch(error=>{
                 toast.error("Firebase Error")
